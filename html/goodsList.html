@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/goosList.css">
+    <link rel="stylesheet" href="../css/foot.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="..//js/goodsList.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/cookie.js"></script>
+    <!-- <script src="../js/"></script> -->
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+
+    </header>
+
+    <!-- 热门商品l列表 -->
+
+    <div class="home_box clear">
+
+        <div class="homeTop">
+            <h5>
+                <div class="orderColBox">
+                    <label>
+                        综合排序
+                        <input type="radio" checked="" name="orderCol" class="orderCol" value="id">
+                    </label>
+                    <label>
+                        名称排序
+                        <input type="radio" checked="" name="orderCol" class="orderCol" value="id">
+                    </label>
+
+                </div>
+                <div class="orderTypeBox">
+                    <label>
+                        价格低到高
+                        <input type="radio" checked="" name="orderType" class="orderType" value="asc">
+                    </label>
+                    <label>
+                        价格高到低
+                        <input type="radio" name="orderType" class="orderType" value="desc">
+                    </label>
+                </div>
+            </h5>
+
+        </div>
+        <div class="pageBox">
+            <button class="prev">上一页</button>
+            <span class="pageTips">1/20,共444条</span>
+            <button class="next">下一页</button>
+        </div>
+        <div>
+            <ul class="hot_items" id="hot_items1">
+                <!-- <li class="item_four">
+                    <div class="product_box_item">
+                        <div>
+                            <div class="item_img">
+                                <img src="${goodsImg}"
+                                    alt="" style="opacity: 1; transition: opacity 0.3s ease-in-out 0s;">
+                            </div>
+                            <h4>${goodsName}</h4>
+                            <h6></h6>
+                        </div>                      
+
+                        <div class="item_price">
+                            <div class="discount_price">
+                                <span>
+                                    <i>¥</i>
+                                    <span>${goodsPrice}</span>
+                                </span>
+                            </div>
+                            <div class="original_price">
+                                <span>
+                                    <i>¥</i>
+                                    <span>149.00</span>
+                                </span>
+
+                            </div>
+                        </div>
+                      
+                    </div>
+                </li> -->
+
+
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer></footer>
+
+</body>
+
+</html>

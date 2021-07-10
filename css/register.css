@@ -1,0 +1,447 @@
+@charset "UTF-8";
+@import url(../css/result.css);
+@import url(.common.scss);
+body {
+  color: #666666;
+  font-family: 华文黑体, "Microsoft YaHei", 微软雅黑, STHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* 外层的盒子*/
+.boss {
+  width: 480px;
+  margin-left: -240px;
+  font-weight: 700;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px #000026;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  top: 50%;
+  left: 50%;
+  margin-left: -225px;
+  margin-top: -240px;
+  position: absolute;
+  /* 上部*/
+  /* 注册*/
+}
+.boss .title {
+  width: 480px;
+  height: 209px;
+  background-color: pink;
+  background: url(../images/register/cloud.png) no-repeat;
+  background-position: center 30px;
+  background-size: 120px auto;
+  position: relative;
+}
+.boss .title > h4 {
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font: inherit;
+  vertical-align: baseline;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+.boss .content {
+  padding: 0 18px 12px;
+  position: relative;
+  z-index: 9;
+  margin-top: 23px;
+}
+.boss .content .common-form li {
+  margin: 14px 5px;
+  position: relative;
+  /* 忘记密码*/
+}
+.boss .content .common-form li .input {
+  width: 440px;
+  height: 38px;
+  background: rgba(0, 0, 0, 0.03);
+  box-shadow: none;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 15px;
+  line-height: 40px;
+  opacity: 1 !important;
+  position: relative;
+  clear: both;
+}
+.boss .content .common-form li .input .cr {
+  text-align: left;
+  left: 15px;
+  padding-left: 12px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  width: 112px;
+}
+.boss .content .common-form li .input .xuan {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+  padding-right: 12px;
+  position: absolute;
+  right: 10px;
+  display: inline-block;
+  max-width: 76px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+  background-image: url(../images/register/ic_change.png);
+  background-size: 8px 12px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 100;
+}
+.boss .content .common-form li input {
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  background-color: -internal-light-dark(white, #3b3b3b);
+  font: 400 13.3333px Arial;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: none;
+  border-color: -internal-light-dark(#767676, #858585);
+  outline: none;
+}
+.boss .content .common-form li .remember {
+  width: 440px;
+  font-weight: 700;
+  margin: 6px 12px 0;
+  height: 28px;
+  line-height: 28px;
+  position: relative;
+  clear: both;
+}
+.boss .content .common-form li .remember .checked {
+  float: left;
+  font-size: 10px;
+  font-weight: 400;
+  width: 24px;
+  height: 24px;
+  color: rgba(0, 0, 0, 0.15);
+}
+.boss .content .common-form li > a {
+  display: inline-block;
+  margin-right: 8px;
+  color: #406dd6;
+}
+.boss .content .btn-wrapper {
+  margin-bottom: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 24px 0 12px;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  clear: both;
+}
+.boss .content .btn-wrapper .btn {
+  display: block;
+  user-select: none;
+  text-align: center;
+  width: 444px;
+  height: 60px;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 12px;
+  opacity: 0.4;
+  text-shadow: #4f70b3 0 -1px 0;
+  background: #5f7ed7;
+  border-radius: 20px;
+}
+.boss .content .agreement {
+  color: rgba(0, 0, 0, 0.4);
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 12px;
+  font: inherit;
+  height: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.boss .content .agreement span {
+  font-size: 12px;
+}
+
+.register-bd {
+  width: 100%;
+  padding: 0 32px 0 32px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+.register-bd .phone-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 308px;
+  height: 38px;
+  background: rgba(0, 0, 0, 0.03);
+  box-shadow: none;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 15px;
+  line-height: 40px;
+  opacity: 1 !important;
+  position: relative;
+  clear: both;
+}
+.register-bd .phone-wrap .phone-perfix {
+  width: 72px;
+  height: 42px;
+  position: relative;
+  color: #333;
+  font-size: 14px;
+}
+.register-bd .phone-wrap .phone-perfix .phone-status {
+  line-height: 42px;
+  margin-left: 10px;
+  color: #999;
+}
+.register-bd .phone-wrap .phone-perfix .phone-triangle {
+  border-top: 6px solid #666;
+  border-left: 6px solid rgba(167, 153, 153, 0);
+  border-right: 6px solid rgba(0, 0, 0, 0);
+  border-bottom: 6px solid rgba(0, 0, 0, 0);
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.register-bd .phone-wrap .phone-perfix .phone-list {
+  width: 180px;
+  height: 240px;
+  position: absolute;
+  z-index: 9999;
+  background-color: #fff;
+  overflow-y: auto;
+  display: none;
+  box-shadow: 1px 1px 2px 0px #666;
+}
+.register-bd .phone-wrap .phone-perfix .phone-list li {
+  padding: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.register-bd .phone-wrap .phone-perfix .phone-list .quc-right {
+  float: right;
+}
+.register-bd .phone-wrap .phone-perfix .phone-list li + li {
+  padding: 20px;
+  padding-left: 10px;
+  border-top: 1px solid #333;
+}
+.register-bd .phone-wrap .phone-input {
+  display: flex;
+  width: 222px;
+  height: 42px;
+  background: transparent;
+  position: relative;
+  box-sizing: border-box;
+}
+.register-bd .phone-wrap .phone-input .phone-icon {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.register-bd .phone-wrap .phone-input .phone-icon i {
+  font-size: 20px;
+  color: #666;
+  line-height: 40px;
+  color: #999;
+}
+.register-bd .phone-wrap .phone-input .phoneSpan {
+  position: absolute;
+  font-size: 12px;
+  bottom: -17px;
+  left: 20px;
+  z-index: 1;
+}
+.register-bd .phone-wrap .phone-input .phone {
+  outline: none;
+  width: 180px;
+  border: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+.register-bd .code-wrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 308px;
+  height: 42px;
+  margin-bottom: 20px;
+}
+.register-bd .code-wrap .code-input {
+  display: flex;
+  width: 134px;
+  box-sizing: border-box;
+  position: relative;
+  background: rgba(0, 0, 0, 0.03);
+  box-shadow: none;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.register-bd .code-wrap .code-input .code-icon {
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #999;
+}
+.register-bd .code-wrap .code-input .code {
+  width: 94px;
+  height: 38px;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.register-bd .code-wrap .code-input .codeSpan {
+  position: absolute;
+  font-size: 12px;
+  bottom: -17px;
+  left: 20px;
+  z-index: 1;
+}
+.register-bd .code-wrap .code-auto-wrap {
+  width: 102px;
+  text-align: center;
+  border: 1px solid #ddd;
+  height: 38px;
+  border: 0;
+  outline: none;
+  background: rgba(0, 0, 0, 0.03);
+  box-shadow: none;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 15px;
+  line-height: 40px;
+  opacity: 1 !important;
+  position: relative;
+  clear: both;
+}
+.register-bd .code-wrap .code-cut {
+  text-align: center;
+  line-height: 42px;
+  color: #00c89f;
+}
+.register-bd .pwd-wrap {
+  margin-top: 20px;
+  display: flex;
+  width: 308px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  position: relative;
+  height: 38px;
+  border: 0;
+  outline: none;
+  background: rgba(0, 0, 0, 0.03);
+  box-shadow: none;
+  border-radius: 8px;
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 15px;
+  line-height: 40px;
+  opacity: 1 !important;
+  position: relative;
+  clear: both;
+}
+.register-bd .pwd-wrap .pwd-icon {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.register-bd .pwd-wrap .pwd-icon i {
+  font: 20px;
+  line-height: 40px;
+  color: #999;
+}
+.register-bd .pwd-wrap .pwd {
+  height: 38px;
+  border: 0;
+  outline: none;
+  border: 0;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+  opacity: 1 !important;
+  position: relative;
+  clear: both;
+}
+.register-bd .pwd-wrap .pwdSpan {
+  position: absolute;
+  font-size: 12px;
+  bottom: -17px;
+  left: 20px;
+  z-index: 1;
+}
+.register-bd .checkbox-wrap {
+  color: #999;
+  font-size: 12px;
+}
+.register-bd .checkbox-wrap .checkbox-clause a,
+.register-bd .checkbox-wrap .checkbox-privacy a {
+  color: #00c89f;
+}
+.register-bd #btn {
+  width: 308px;
+  height: 42px;
+  margin-top: 20px;
+  font-size: 18px;
+  background: linear-gradient(270deg, #00c6a5, #00cf7d);
+  outline: none;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+/* 底部*/
+.footer {
+  margin-top: 30px;
+  padding: 0 0 24px;
+  display: block;
+  width: 100%;
+  clear: both;
+  color: #434d55;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  margin-top: 50px;
+}
+.footer h4 {
+  height: 20px;
+  line-height: 20px;
+  margin-top: 8px;
+  font-size: 14px;
+  padding: 0;
+}
+
+/*# sourceMappingURL=register.css.map */

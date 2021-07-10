@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoppingcar</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../css/shoppingcar.css">
+    <script src="../js/cookie.js"></script>
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="../js/interface.js"></script>
+</head>
+
+<body>
+    <!-- 头部区 -->
+    <header>
+        <div class="header-top">
+            <div class="contaninter">
+                <div class="header-left">
+                    <p class="text-color-9">嗨，欢迎来订花乐!</p>
+                    <span class="iconfont icon-weixin text-color-logo"></span>
+                    <a href="">关注微信</a>
+                </div>
+                <div class="header-right">
+                    <div class="usermessage">
+                        <a href="./login.html">你好,请登录</a>
+                    </div>
+                    <a href="./register.html" class="center text-color-logo">免费注册</a>
+                    <span class="line">|</span>
+                    <a href="" class="center">订单查询</a>
+                    <span class="line">|</span>
+                    <a href="./shoppingcar.html">
+                        <span class="iconfont icon-gouwuche text-color-logo"></span>
+                        <span class="text-color-9">购物车</span>
+                        <span class="text-color-logo">(0)</span>
+                    </a>
+                    <span class="line">|</span>
+                    <a href="" class="phone1">手机下单</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-bottom">
+            <div class="contaninter">
+                <div class="logo">
+                    <div class="logo-img align-center">
+                        <a href=""><img src="../images/main_ (10).png" alt="网页logo"></a>
+                    </div>
+                </div>
+
+                <div class="phone-search">
+                    <span class="iconfont icon-zuoji text-color-logo"></span>
+                    <span class="phoneNum text-color-9">400-060-1520</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="gouwuche">
+        <div class="shoppingcar">
+            <div class="shoppingone">
+
+                <div class="shoppingtitle">
+
+                    <div class="allcheck single-area">
+                        <input class="check-all" type="checkbox">
+                        <p>全选</p>
+                    </div>
+
+                    <div class="goods-name single-area">
+                        <p>商品信息</p>
+                    </div>
+
+
+                    <div class="goods-entry single-area">
+                        <p>店铺价</p>
+                    </div>
+
+                    <div class="goods-entry single-area">
+                        <p>数量</p>
+                    </div>
+
+                    <div class="goods-entry single-area">
+                        <p>小计</p>
+                    </div>
+
+                    <div class="goods-entry single-area">
+                        <p>操作</p>
+                    </div>
+                </div>
+
+                <div class="shoppinggoods">
+                    <div class="goods-items">
+                        <div class="single-area">
+                            <input class="checkone" type="checkbox">
+                        </div>
+                        <div class="goods-name single-area">
+
+                            <img src="../images/main_ (45).jpg" class="goods-image">
+                            <p class="goods-des">璀璨星空</p>
+
+                        </div>
+
+                        <div class="goods-entry single-area">
+                            <p class="redfont">￥329</p>
+                        </div>
+                        <div class="goods-entry single-area">
+
+                            <ul class="nmb_jj fl">
+                                <li class="reduce">-</li>
+                                <li>
+                                    <input name="" type="text" value="1" class="srkk" id="num">
+                                </li>
+                                <li class="add">+</li>
+                            </ul>
+
+
+                        </div>
+
+                        <div class="goods-entry single-area">
+                            <p class="text-light">￥389</p>
+                        </div>
+                        <div class="goods-entry single-area">
+                            <span class="iconfont icon-shanchu"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="goods-settlement">
+                    <div class="goods-settlementcont">
+                        <div class="goods-allcheck single-area"></div>
+
+                        <div class="goods-name single-area cursorponiter">
+                            <button class="deleteall">
+                                删除
+                            </button>
+                        </div>
+                        <div class="goods-entry goods-allnumber single-area">
+                            <p>共</p>
+                            <p id="total-num" class="large-size">0</p>
+
+                            <p>件商品</p>
+                        </div>
+                        <div class="goods-entry goods-payable single-area">
+                            <p>应付金额:</p>
+                            <p class="redfont large-size">￥<span id="total-price">0.00</span></p>
+
+                        </div>
+                        <div class="goods-entry allsettle single-area">
+                            结算
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- footer区 -->
+    <footer>
+        <div class="footer">
+            <div class="footer-top">
+                <div class="footer-top-all">
+                    <div class="logo-img">
+                        <img src="../images/main_ (10).png" alt="">
+                    </div>
+                    <div class="nav-module">
+                        <div class="footer-module">
+                            <p>热门导航</p>
+                            <div class="footer-nav">
+                                <a href="/" target="_blank" class="footer-nav-item">网站首页</a>
+                                <a href="/" target="_blank" class="footer-nav-item">爱情鲜花</a>
+                                <a href="/" target="_blank" class="footer-nav-item">订单查询</a>
+                                <a href="/" target="_blank" class="footer-nav-item">全部商品</a>
+                            </div>
+                        </div>
+                        <div class="footer-module footer-module1 fl align-center">
+                            <p>客户服务</p>
+                            <div>
+                                <div class="footer-nav fl">
+                                    <a href="/" target="_blank" class="footer-nav-item">关于我们</a>
+                                    <a href="/" target="_blank" class="footer-nav-item">服务声明</a>
+                                    <a href="/" target="_blank" class="footer-nav-item">订花流程</a>
+                                    <a href="/" target="_blank" class="footer-nav-item">支付方式</a>
+
+                                </div>
+                                <div class="footer-nav fr">
+                                    <a href="/" target="_blank" class="footer-nav-item">配送说明</a>
+                                    <a href="/" target="_blank" class="footer-nav-item">售后服务</a>
+                                    <a href="/" target="_blank" class="footer-nav-item">隐私条款</a>
+                                    <a href="/" target="_blank" class="footer-nav-item">联系我们</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-module fl align-center">
+                            <p>联系我们</p>
+                            <div class="footer-nav">
+                                <a href="javascript:;" class="footer-nav-item">意见反馈</a>
+                                <a href="javascript:;" class="footer-nav-item">工作时间：07:00-23:00</a>
+                                <a href="javascript:;" class="footer-nav-item">7*24小时在线订购</a>
+
+                                <a href="javascript:;" class="footer-nav-item">全国热线：400-060-1520</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="erweima">
+                        <div class="erweima-img">
+                            <img src="../images/main_ (17).png" alt="">
+                        </div>
+                        <p class="text-color-9">扫码关注微信</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="footer-bottom">
+                <p class="text-color-9">Copyright©2020 &nbsp;成都勿忘我科技有限公司 &nbsp;
+                    <a href="https://beian.miit.gov.cn">蜀ICP备20016463号-2</a>&nbsp;
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+<script>
+    $(function () {
+        var user = getCookie("lgc");
+        console.log(user)
+
+        if (user) {
+            $(".usermessage").html(`<a href="./login.html">你好,${user}</a><a class="ollbtn" onclick="exit()">退出</a>`)
+        }
+
+
+        //购物车商品的动态生成
+        searchShoppingCarByUser({ user }).then(({ status, detail, list }) => {
+            console.log(status);
+            if (status) {
+                var html = "";
+                list.forEach(({ id, gId, goodsName, goodsPrice, goodsImg, buyNum, total }) => {
+
+                    html += `<div class="goods-items" data-id="${id}" >
+                        <div class="single-area">
+                            
+                            <input class="check-one" type="checkbox">
+                        </div>
+                        <div class="goods-name single-area">
+
+                            <img src="${goodsImg}" class="goods-image">
+                            <p class="goods-des">${goodsName}</p>
+
+                        </div>
+
+                        <div class="goods-entry single-area">
+                            <p class="redfont">￥<span class="pricearea">${goodsPrice}</span></p>
+                        </div>
+                        <div class="goods-entry single-area">
+
+                            <ul class="nmb_jj fl">
+                                <li class="reduce">${buyNum > 1 ? "-" : ""}</li>
+                                <li>
+                                    <input name="" type="text" value="${buyNum}" class="srkk" id="num">
+                                </li>
+                                <li class="add">+</li>
+                            </ul>
+                        </div>
+                        <div class="goods-entry single-area">
+                            <p class="text-light">￥<span class="totalprice">${total}</span></p>
+                        </div>
+                        <div class="goods-entry single-area">
+                            <span class="iconfont icon-shanchu"></span>
+                        </div>
+                    </div>`
+
+                });
+                $(".shoppinggoods").html(html);
+
+            } else {
+                $(".shoppinggoods").html(`暂无商品 <a href='./goodslist.html'>采购商品</a>`);
+            }
+
+
+
+            //全选
+            $(".check-all").click(function () {
+                var status = $(".check-all").prop("checked");
+                $(".check-one").prop("checked", status);
+
+                getTotal();
+            })
+
+            //单选反选
+            $(".check-one").click(function () {
+                if ($(".check-one").length > 0 && $(".check-one").length == $(".check-one:checked").length) {
+                    $(".check-all").prop("checked", true);
+                } else {
+                    $(".check-all").prop("checked", false);
+                }
+
+                getTotal();
+            })
+
+
+            //加减
+            $(".add").off("click").click(function () {
+                var id = $(this).parents(".goods-items").data("id");
+
+                updataShoppingCarById({ id, type: 1 }).then(({ status, detail }) => {
+                    if (status) {
+                        var num = $(this).prev().find("input").val()
+                        num++
+                        $(this).prev().find("input").val(num);
+
+                        var num = $(this).prev().find("input").val()
+                        var price = $(this).parents(".goods-items").find(".pricearea").text();
+                        // console.log(num, price);
+                        $(this).parents(".goods-items").find(".totalprice").text((num * price).toFixed(2));
+
+                        $(this).prev().prev().text("-");
+                    } else {
+                        alert(detail);
+                    }
+                    getTotal();
+                })
+
+                // getTotal();
+            })
+
+            $(".reduce").off("click").click(function () {
+                var num = $(this).next().find("input").val();
+                if (num <= 1) return false;
+
+                var id = $(this).parents(".goods-items").data("id");
+
+                updataShoppingCarById({ id, type: 0 }).then(({ status, detail }) => {
+                    if (status) {
+                        var num = $(this).next().find("input").val();
+                        if (num <= 1) return false;
+                        num--;
+                        if (num == 1) $(this).text("");
+                        $(this).next().find("input").val(num);
+
+                        var num = $(this).next().find("input").val()
+                        var price = $(this).parents(".goods-items").find(".pricearea").text();
+                        // console.log(num, price);
+                        $(this).parents(".goods-items").find(".totalprice").text((num * price).toFixed(2));
+
+                    } else {
+                        alert(detail);
+                    }
+                    getTotal();
+                })
+
+            })
+
+
+            //单删
+            $(".icon-shanchu").click(function () {
+                var id = $(this).parents(".goods-items").data("id");
+                deleteShoppingCarById({ id }).then(({ status, detail }) => {
+                    if (status) {
+                        $(this).parents(".goods-items").remove();
+                        if ($(".check-one").length == 0) $(".check-all").prop("checked", false);
+                    }
+                    getTotal();
+                })
+
+            })
+
+
+            //多删
+            $(".deleteall").click(function () {
+                var list = $(".check-one:checked").parents(".goods-items").map(function () {
+                    return $(this).attr("data-id");
+                }).get();
+                id = list.join(",");
+
+                deleteShoppingCarById({ id }).then(({ status, detail }) => {
+                    if (status) {
+                        $(".check-one:checked").parents(".goods-items").remove();
+                        if ($(".check-one").length == 0) $(".check-all").prop("checked", false);
+                    }
+
+                    getTotal();
+
+                })
+
+            })
+
+
+
+        })
+
+        $(".logo-img").click(function () {
+            location.href = "./main.html"
+        })
+    })
+
+
+
+    //结算
+    function getTotal() {
+        var sum = 0;
+        var allPrice = 0;
+        $(".check-one:checked").parents(".goods-items").each(function () {
+            var num = $(this).find(".srkk").val() * 1;
+            var subtotal = $(this).find(".totalprice").text() * 1;
+
+            sum += num;
+            allPrice += subtotal;
+        })
+        $("#total-price").text(allPrice.toFixed(2));
+        $("#total-num").text(sum);
+    }
+
+
+
+    function exit() {
+        delCookie("lgc");
+        location.reload();
+    }
+</script>
+
+</html>

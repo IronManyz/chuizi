@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartisan登录</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="../js/cookie.js"></script>
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/login.js"></script>
+
+</head>
+
+<body>
+    <div class="boss">
+        <div class="title">
+
+            <h4>使用 Smartisan ID 登录官网</h4>
+        </div>
+        <div class="content ng-scope ng-animate ">
+            <form class="login-bd" action="" onsubmit="return false">
+                <ul class="common-form">
+                    <li class="country-region">
+                        <div class="input">
+                            <span class="cr">国家和地区</span>
+                            <span class="xuan con">中国</span>
+                        </div>
+                    </li>
+                    <li class="user">
+                        <div class="input">
+
+                            <label for="user" class="con">&nbsp;&nbsp;账号</label>
+                            <input type="text" name="user" class="indent user" style="background-color: transparent;">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="input">
+                            <label for="password">&nbsp;&nbsp;密码</label>
+                            <input type="password" class="pwd" style="background-color: transparent;">
+                        </div>
+                    </li>
+                    <li class="remember ng-scope">
+                        <div class="autod">
+                            <span class="checkbox checked">自动登录</span>
+                            <a href="../html/register.html" class="a">立即注册</a>
+                            <a href="script:" class="a">忘记密码</a>
+
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn-wrapper">
+                    <button id="btn" class="btn">登录</button>
+                </div>
+                <!-- <div class="wrapper2 clearfix">
+                    <ul>
+                        <li class="text">其他账号登录</li>
+                        <li><a href="script"><span>微信</span></a></li>
+                        <li><a href="script"><span>微信</span></a></li>
+                        <li><a href="script"><span>微信</span></a></li>
+                        <li></li>
+                    </ul>
+                </div> -->
+                <div class="agreement">
+                    <span> "登录代表您已同意"
+                        <a href="https://resource.smartisan.com/docs/smartisan_os_legal_statement_cn.html"
+                            target="_blank">用户协议</a>"和"
+                        <a href="https://resource.smartisan.com/docs/smartisan_os_privacy_policy_cn.html"
+                            target="_blank">隐私政策</a>
+                    </span>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    $(window).ready(function () {
+        $("#btn").click(function () {
+            // debugger;
+            var phone = $(".indent").val();
+            // var phone = $(".user")
+            var pwd = $(".pwd").val();
+            console.log(phone, pwd);
+
+            $.ajax({
+                type: "post",
+                data: {
+                    account: phone,
+                    pwd
+                },
+                dataType: "json",
+
+                url: "../php/login_account.php",
+
+                success(result) {
+                    var {
+                        status,
+                        detail
+                    } = result;
+                    console.log(status, detail);
+                    if (status) {
+                        setCookie("lgc", phone);
+                        alert(detail);
+                        location.href = "../html/home.html";
+                    } else {
+                        alert(detail);
+                    }
+                }
+
+            })
+        })
+    })
+</script>
+
+</html>
